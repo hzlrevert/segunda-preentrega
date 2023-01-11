@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Nuevo Curso</h1>
+<div mat-dialog-content>
+    <form class="flex flex-column" [formGroup]="cursoForm">
+        <div class="mb-2">
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input [formControl]="nombreControl" matInput placeholder="Placeholder">
+                <mat-icon matSuffix>done</mat-icon>
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Profesor</mat-label>
+            <input [formControl]="profesorControl" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>done</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-flat-button color="warn" mat-button  (click)="close()">Cancelar</button>
+    <button mat-button [mat-dialog-close]="cursoForm.value" cdkFocusInitial mat-flat-button color="primary">Guardar</button>
+    
+  </div>  
