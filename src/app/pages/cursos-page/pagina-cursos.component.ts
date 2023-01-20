@@ -10,10 +10,11 @@ import { CursoDialogComponent } from 'src/app/shared/components/curso-dialog/cur
 })
 export class PaginaCursosComponent {
   cursos: Cursos[] = [
-    new Cursos(1,"Fundamentos de algoritmos","Jorge Bojorquez"),
-    new Cursos(2,"Calidad y pruebas de software","Luis Miguel"),
-    new Cursos(3,"Videjuegos y aplicaciones moviles","Jorge Narvaez"),
-    new Cursos(4,"Redes 2","Augusto Vigilio"),  
+    new Cursos(1,"Analisis matematico I","Pepe Argento"),
+    new Cursos(2,"Analisis matematico II","Harry Callahan"),
+    new Cursos(3,"Algebra","Micky Vainilla "),
+    new Cursos(4,"Fisica I","Ricky Fort"),  
+    new Cursos(4,"Fisica II","Paolo Rockero"),  
   ]
 
   displayedColumns = ['id','nombre','profesor','editar','eliminar']

@@ -9,7 +9,11 @@ import { ProductsPageComponent } from './pages/products-page/products-page.compo
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
+    loadChildren:  () => import('./auth/auth.module').then((m) => m.AuthModule)
+  },
+  {
+    path: 'home',
     component: PageWrapperComponent,
     children: [
       {
@@ -29,7 +33,8 @@ const routes: Routes = [
         component: ProductsPageComponent
       }
     ]
-  } 
+  },
+  {path: '', redirectTo:'login', pathMatch:'full'},
 ];
 
 @NgModule({

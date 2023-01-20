@@ -1,6 +1,6 @@
 import { DialogRef } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA }from '@angular/material/dialog';
 import { Student } from 'src/app/models/students.models';
 @Component({
@@ -10,9 +10,9 @@ import { Student } from 'src/app/models/students.models';
   ]
 })
 export class StudentDialogComponent {
-  nombreControl = new FormControl('',[Validators.required])
-  apellidoControl = new FormControl('', [Validators.required])
-  notaControl = new FormControl('', [Validators.required, Validators.maxLength(2), Validators.minLength(1)])
+  nombreControl = new FormControl('')
+  apellidoControl = new FormControl('')
+  notaControl = new FormControl('')
   studentForm = new FormGroup({
     nombre: this.nombreControl,
     apellido: this.apellidoControl,
