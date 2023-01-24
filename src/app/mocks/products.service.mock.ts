@@ -5,14 +5,14 @@ const FAKE_PRODUCTS: Product[] = [
   {
     id: "1",
     createdAt: new Date(),
-    description: 'Lorem ipsum',
-    name: 'Lorem'
+    description: 'Descripcion de productos',
+    name: 'PRODUCTOs'
   },
   {
     id: "2",
     createdAt: new Date(),
-    description: 'Lorem ipsum',
-    name: 'Lorem'
+    description: 'Descripcion de ptroducto',
+    name: 'OTRO PRODUCTO'
   }
 ]
 
