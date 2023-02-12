@@ -33,7 +33,7 @@ import { appReducer } from './store/app.reducer';
     HomeComponent,
     ProductsPageComponent
   ],
-  imports: [    
+  imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MyMaterialModule,
