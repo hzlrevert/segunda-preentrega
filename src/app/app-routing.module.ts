@@ -7,6 +7,7 @@ import { PageWrapperComponent } from './shared/layout/page-wrapper/page-wrapper.
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
 import { UsersPageComponent } from './users/pages/users-page/users-page.component';
+
 const routes: Routes = [
   {
     path: 'login',
