@@ -6,7 +6,7 @@ import { StudentsPageComponent } from './pages/students-page/students-page.compo
 import { PageWrapperComponent } from './shared/layout/page-wrapper/page-wrapper.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsPageComponent } from './pages/products-page/products-page.component';
-
+import { UsersPageComponent } from './users/pages/users-page/users-page.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -31,6 +31,10 @@ const routes: Routes = [
       {
         path: 'products',
         component: ProductsPageComponent
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('./users/users.module').then((module) => module.UsersModule)
       }
     ]
   },

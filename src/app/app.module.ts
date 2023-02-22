@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducer } from './store/app.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AppStoreModule } from './app-store.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { appReducer } from './store/app.reducer';
     HomeComponent,
     ProductsPageComponent
   ],
-  imports: [
+  imports: [    
     BrowserModule,
     BrowserAnimationsModule,
     MyMaterialModule,
@@ -41,8 +43,7 @@ import { appReducer } from './store/app.reducer';
     AppRoutingModule,
     HttpClientModule,    
     StoreModule.forRoot(appReducer, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    StoreModule.forRoot({}, {}),
+    AppStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
