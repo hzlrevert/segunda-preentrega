@@ -44,7 +44,7 @@ import { AppStoreModule } from './app-store.module';
     HttpClientModule,    
     StoreModule.forRoot(appReducer, {}),
     AppStoreModule,
-    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent]
